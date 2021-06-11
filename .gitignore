@@ -120,4 +120,5 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 Keeper-beforeAndroidx-20210525.zip
+/gradlew.bat
 !app/zip4j/build/
