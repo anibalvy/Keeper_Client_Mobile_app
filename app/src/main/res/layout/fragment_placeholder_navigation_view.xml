@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PlaceholderFragmentNavigationView">
+
+    <!-- TODO: Update blank fragment layout -->
+<!--    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewCheckPoint"
+        app:srcCompat="@drawable/marker"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/labelCheckPoint"
+        android:id="@+id/textLabelCheckPoint"
+        android:textColor="#1120ff"
+        android:layout_toRightOf="@+id/imageViewCheckPoint"
+        android:layout_alignTop="@+id/imageViewCheckPoint"
+        android:layout_alignBottom="@+id/imageViewCheckPoint"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/valueCheckPoint"
+        android:id="@+id/textValueCheckPoint"
+        android:textAlignment="center"
+        android:layout_toRightOf="@+id/textLabelCheckPoint"
+        android:layout_marginLeft="25dp"
+        android:layout_alignTop="@+id/textLabelCheckPoint"
+        android:layout_alignBottom="@+id/textLabelCheckPoint"
+        android:gravity="center_vertical" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewSpeed"
+        app:srcCompat="@drawable/speed"
+        android:layout_alignRight="@+id/imageViewCheckPoint"
+        android:layout_alignLeft="@+id/imageViewCheckPoint"
+        android:layout_alignTop="@+id/textLabelVelocity"
+        android:layout_alignBottom="@+id/textLabelVelocity"
+        android:gravity="bottom"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/labelVelocity"
+        android:id="@+id/textLabelVelocity"
+        android:textColor="#1120ff"
+        android:layout_below="@+id/textValueCheckPoint"
+        android:layout_alignLeft="@+id/textLabelCheckPoint"
+        android:gravity="bottom"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/valueVelocity"
+        android:id="@+id/textValueVelocity"
+        android:textAlignment="center"
+        android:layout_toRightOf="@+id/textLabelVelocity"
+        android:layout_alignTop="@+id/textLabelVelocity"
+        android:layout_alignLeft="@+id/textValueCheckPoint"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="KM/h"
+        android:id="@+id/textLabelKMH"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/textValueVelocity"
+        android:layout_toRightOf="@+id/textValueVelocity"
+        android:layout_marginLeft="20dp"
+        android:gravity="bottom"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewLocation"
+        app:srcCompat="@drawable/location"
+        android:layout_alignTop="@+id/textLabelLongitude"
+        android:layout_alignBottom="@+id/textLabelLongitude"
+        android:layout_alignLeft="@+id/imageViewSpeed"
+        android:layout_alignRight="@+id/imageViewSpeed"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelLongitude"
+        android:id="@+id/textLabelLongitude"
+        android:layout_marginTop="27dp"
+        android:textColor="#1120ff"
+        android:layout_below="@+id/textValueVelocity"
+        android:layout_toRightOf="@+id/imageViewUser"
+        android:layout_alignLeft="@+id/textLabelVelocity"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valueLongitude"
+        android:id="@+id/textValueLongitude"
+        android:layout_alignTop="@+id/textLabelLongitude"
+        android:layout_toRightOf="@+id/textLabelLongitude"
+        android:layout_alignLeft="@+id/textValueVelocity"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelLatitude"
+        android:id="@+id/textLabelLatitude"
+        android:textColor="#1120ff"
+        android:layout_below="@+id/textValueLongitude"
+        android:layout_toRightOf="@+id/imageViewLocation"
+        android:layout_alignLeft="@+id/textLabelLongitude"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valueLatitude"
+        android:id="@+id/textValueLatitude"
+        android:layout_below="@+id/textValueLongitude"
+        android:layout_alignTop="@+id/textLabelLatitude"
+        android:layout_alignLeft="@+id/textValueLongitude"
+        android:layout_toRightOf="@+id/textLabelLatitude" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewStatus"
+        app:srcCompat="@drawable/status"
+        android:layout_below="@+id/imageViewLocation"
+        android:layout_alignTop="@+id/textLabelStatus"
+        android:layout_alignBottom="@+id/textLabelStatus"
+        android:layout_alignLeft="@+id/imageViewStatus"
+        android:layout_alignRight="@+id/imageViewLocation"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelStatus"
+        android:id="@+id/textLabelStatus"
+        android:textColor="#1120ff"
+        android:layout_below="@+id/textValueLatitude"
+        android:layout_alignLeft="@+id/textLabelLatitude"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valueStatus"
+        android:id="@+id/textValueStatus"
+        android:layout_alignTop="@+id/textLabelStatus"
+        android:layout_alignLeft="@+id/textValueVelocity"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewSync"
+        app:srcCompat="@drawable/sync"
+        android:layout_alignTop="@+id/textLabelSync"
+        android:layout_alignBottom="@+id/textLabelSync"
+        android:layout_alignLeft="@+id/imageViewStatus"
+        android:layout_alignRight="@+id/imageViewStatus"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelSync"
+        android:id="@+id/textLabelSync"
+        android:textColor="#1120ff"
+        android:layout_below="@+id/textValueStatus"
+        android:layout_alignLeft="@+id/textLabelStatus"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valueSync"
+        android:id="@+id/textValueSync"
+        android:layout_toRightOf="@+id/textLabelSync"
+        android:layout_alignTop="@+id/textLabelSync"
+        android:layout_alignLeft="@+id/textValueStatus"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewUser"
+        app:srcCompat="@drawable/user"
+        android:layout_alignTop="@+id/textLabelUser"
+        android:layout_alignBottom="@+id/textLabelUser"
+        android:layout_alignLeft="@+id/imageViewSync"
+        android:layout_alignRight="@+id/imageViewSync"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelUser"
+        android:id="@+id/textLabelUser"
+        android:textColor="#1120ff"
+        android:layout_below="@+id/textValueSync"
+        android:layout_alignLeft="@+id/textLabelSync"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valueUser"
+        android:id="@+id/textValueUser"
+        android:layout_alignTop="@+id/textLabelUser"
+        android:layout_alignLeft="@+id/textValueVelocity"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewCar"
+        app:srcCompat="@drawable/car"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:layout_toLeftOf="@+id/textLabelUser"
+        android:layout_alignTop="@+id/textLabelVehicle"
+        android:layout_alignBottom="@+id/textLabelVehicle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelVehicle"
+        android:id="@+id/textLabelVehicle"
+        android:textColor="#1120ff"
+        android:layout_below="@+id/textValueUser"
+        android:layout_alignLeft="@+id/textLabelUser"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valueVehicle"
+        android:id="@+id/textValueVehicle"
+        android:layout_below="@+id/textValueUser"
+        android:layout_alignLeft="@+id/textValueUser"
+        android:layout_alignEnd="@+id/textValueUser" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewRoute"
+        app:srcCompat="@drawable/route"
+        android:layout_below="@+id/imageViewCar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/textLabelVehicle"
+        android:layout_alignBottom="@+id/textLabelRoute"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelRoute"
+        android:id="@+id/textLabelRoute"
+        android:textColor="#1120ff"
+        android:layout_below="@+id/textValueVehicle"
+        android:layout_alignLeft="@+id/textLabelVehicle"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valueRoute"
+        android:id="@+id/textValueRoute"
+        android:layout_below="@+id/textValueVehicle"
+        android:layout_alignLeft="@+id/textValueVehicle"
+        android:layout_alignEnd="@+id/textValueVehicle" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewSession"
+        app:srcCompat="@drawable/key"
+        android:layout_below="@+id/textValueRoute"
+        android:layout_alignTop="@+id/textLabelSession"
+        android:layout_alignBottom="@+id/textLabelSession"
+        android:layout_alignLeft="@+id/imageViewRoute"
+        android:layout_alignRight="@+id/imageViewRoute"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelSession"
+        android:id="@+id/textLabelSession"
+        android:layout_below="@+id/textValueRoute"
+        android:textColor="#1120ff"
+        android:layout_alignLeft="@+id/textLabelRoute"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valueSession"
+        android:id="@+id/textValueSession"
+        android:layout_below="@+id/textValueRoute"
+        android:layout_alignLeft="@+id/textValueRoute"
+        android:layout_alignStart="@+id/textValueRoute" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewSessionDate"
+        app:srcCompat="@drawable/calendar"
+        android:layout_below="@+id/textValueSession"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/textLabelSession"
+        android:layout_alignBottom="@+id/textLabelSessionDate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelSessionDate"
+        android:id="@+id/textLabelSessionDate"
+        android:layout_below="@+id/textValueSession"
+        android:layout_alignLeft="@+id/textLabelSession"
+        android:textColor="#1120ff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valueSessionDate"
+        android:id="@+id/textValueSessionDate"
+        android:layout_below="@+id/textValueSession"
+        android:layout_alignLeft="@+id/textValueSession"
+        android:layout_alignStart="@+id/textValueSession" />
+</FrameLayout>

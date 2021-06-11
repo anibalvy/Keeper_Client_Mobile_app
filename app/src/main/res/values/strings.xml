@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Keeper GPS</string>
+    <string name="action_settings">Settings</string>
+    <string name="user">User :</string>
+    <string name="vehicleText">Vehicle Identifier:</string>
+    <string name="IdentiVehicle">Enter Vehicle data like plate number.</string>
+    <string name="routeText">Choose Route : </string>
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="selRoutes">Select Routes</string>
+    <string name="selResumeRoute">Resume Route</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="longitud_string">0</string>
+    <string name="latitud_string">0</string>
+    <string name="velocidad_max_string">VELOCIDAD MÁXIMA</string>
+    <string name="vel_max_string">0 </string>
+    <string name="km">KM/H</string>
+    <string name="vel_actual">VELOCIDAD ACTUAL</string>
+    <string name="velocidad">0</string>
+    <string name="boton_in">INGRESAR</string>
+    <string name="CADENA_BOTON">INGRESAR</string>
+    <!-- <string name="CADENA_USUARIO">USUARIO</string> -->
+    <!-- <string name="CADENA_PASS">PASSWORD</string> -->
+    <string name="latitud_text">latitud:    </string>
+    <string name="longitud_string2">longitud: </string>
+    <string name="altitud_string">altitud:    </string>
+    <string name="altitud">0</string>
+    <string name="altitud2">0</string>
+    <string name="precision_NAME">precisión:</string>
+    <string name="precision_VALUE2">0</string>
+    <string name="espacio">"    "</string>
+    <string name="espacion_blanco">\"    \"</string>
+    <string name="nombre_menu_archivo">Elegir ruta</string>
+    <string name="etiqueta_boton_ruta">Elegir ruta</string>
+    <string name="valor_edit_text_ruta">/sdcard/dropbox/puntos.kmz</string>
+    <string name="nombre_menu_tolerancia">Tolerancia</string>
+    <string name="cad_usuario">usuario:</string>
+    <string name="cad_sentido">IDA</string>
+    <string name="irRoutes">New Button</string>
+    <!-- Menus - Start -->
+    <string name="action_newUser">Add New User</string>
+    <string name="action_newVehicle">Add New Vehicle</string>
+    <string name="action_refreshUsers">Refresh Users</string>
+    <string name="action_refreshVehicles">Refresh Vehicles</string>
+    <string name="action_refreshRoutes">Refresh Routes</string>
+    <string name="cancelSession">Cancel Session and End Navigation</string>
+    <!-- Menus - End -->
+    <!-- fragment_main.xml - start -->
+    <string name="chooseUser">Select  User:</string>
+    <string name="chooseVehicle">Select Vehicle:</string>
+    <string name="chooseRoute">Select Route:</string>
+    <string name="startSession">Start</string>
+    <string name="btnNewUser">New User</string>
+    <string name="ttsInitSession">Favor elija los datos de inicio de sesion</string>
+    <!-- fragment_main.xml - end -->
+    <!-- fragment_new_user.xml - start -->
+    <string name="title_activity_new_user">Add New User</string>
+    <string name="userEnterName">Enter User info:</string>
+    <string name="addUser">Save User</string>
+    <!-- fragment_new_user.xml - end -->
+    <!-- fragment_new_vehicle.xml - start -->
+    <string name="title_activity_new_vehicle">Add New Vehicle</string>
+    <string name="enterVehicle">Enter Vehicle Information</string>
+    <string name="addVehicle">Save Vehicle</string>
+    <!-- fragment_new_vehicle.xml - end -->
+    <!-- fragment_navigation_view.xml - start -->
+    <string name="title_activity_navigation_view">Navigation View</string>
+    <string name="labelCheckPoint">Check</string>
+    <string name="labelVelocity">Speed      </string>
+    <string name="labelLongitude">Longitude </string>
+    <string name="labelLatitude">Latitude  </string>
+    <string name="labelUser">User      </string>
+    <string name="labelVehicle">Vehicle   </string>
+    <string name="labelRoute">Route      </string>
+    <string name="labelSession">ID </string>
+    <string name="labelStatus">Status </string>
+    <string name="labelSync">Sync </string>
+    <string name="labelSessionDate">Started on</string>
+    <string name="valueCheckPoint">---</string>
+    <string name="valueVelocity">---</string>
+    <string name="valueLongitude">-------</string>
+    <string name="valueLatitude">-------</string>
+    <string name="valueUser">-------</string>
+    <string name="valueVehicle">-------</string>
+    <string name="valueRoute">-------</string>
+    <string name="valueSession">-------</string>
+    <string name="valueStatus">-------</string>
+    <string name="valueSync">-------</string>
+    <string name="valueSessionDate">-------</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- fragment_refresh_routes.xml - start -->
+    <string name="title_activity_refresh_routes">refreshRoutes</string>
+    <string name="labelRefreshRoute">Press button to get Routes information</string>
+    <string name="btnRefreshRoute">REFRESH ROUTES</string>
+    <!-- fragment_refresh_routes.xml - end -->
+
+
+    <!-- fragment_refresh_users.xml - start -->
+    <string name="title_activity_refresh_users">refreshUsers</string>
+    <string name="labelRefreshUsers">Press Button to get Current User information, if you are a new User go to "Add new User"</string>
+    <string name="btnRefreshUsers">REFRESH USERS</string>
+    <!-- fragment_refresh_users.xml - end -->
+
+    <!-- fragment_refresh_vehicles.xml - start -->
+    <string name="title_activity_refresh_vehicles">refreshVehicles</string>
+    <string name="labelRefreshVehicles">Press Button to get Current Vehicles information, if you want to add a New Vehicle, go to "Add new Vehicle"</string>
+    <string name="btnRefreshVehicles">REFRESH VEHICLES</string>
+    <string name="gpsStatus">GPS is OFF, pelase Turn ON</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- fragment_refresh_vehicles.xml - end -->
+
+</resources>

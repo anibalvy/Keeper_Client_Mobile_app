@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kanibalv.app" >
+
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.kanibalv.app.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kanibalv.app.new_vehicle"
+            android:label="@string/title_activity_new_vehicle"
+            android:parentActivityName="com.kanibalv.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name="com.kanibalv.app.refreshRoutes"
+            android:label="@string/title_activity_refresh_routes"
+            android:parentActivityName="com.kanibalv.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name="com.kanibalv.app.new_user"
+            android:label="@string/title_activity_new_user"
+            android:parentActivityName="com.kanibalv.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name="com.kanibalv.app.navigation_view"
+            android:label="@string/title_activity_navigation_view"
+            android:parentActivityName="com.kanibalv.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- Removed for duplicated launcher icon -->
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.kanibalv.app.navigation_service"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name="com.kanibalv.app.serverSync_service"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":ServerSyncService" >
+        </service>
+
+        <activity
+            android:name="com.kanibalv.app.refreshUsers"
+            android:label="@string/title_activity_refresh_users"
+            android:parentActivityName="com.kanibalv.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+        <activity
+            android:name="com.kanibalv.app.refreshVehicles"
+            android:label="@string/title_activity_refresh_vehicles"
+            android:parentActivityName="com.kanibalv.app.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="MainActivity" />
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+</manifest>
