@@ -41,7 +41,7 @@ public class refreshVehicles extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, new RefreshVehiclesFragment())
                     .commit();
         }
     }

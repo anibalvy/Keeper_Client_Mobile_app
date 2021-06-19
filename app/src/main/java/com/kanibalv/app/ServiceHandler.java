@@ -33,7 +33,7 @@ public class ServiceHandler {
     // Url to WS
     //static String URL_SERVER = "http://kanibal.servebeer.com:3000/";
     static String URL_SERVER = "http://192.168.1.167:5000/";
-    static  String URL_GET_USERS  = URL_SERVER + "getUsers";
+    static String URL_GET_USERS  = URL_SERVER + "getUsers";
     static String URL_POST_USERS = URL_SERVER + "postAppUsers";
     static String URL_GET_VEHICLES  = URL_SERVER + "getVehicles";
     static String URL_POST_VEHICLES = URL_SERVER + "postVehicle";

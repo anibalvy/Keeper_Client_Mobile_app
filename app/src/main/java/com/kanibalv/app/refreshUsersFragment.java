@@ -56,11 +56,13 @@ public class refreshUsersFragment extends Fragment {
 /*Async Class to refresh Users*/
 public class GetUsers extends AsyncTask<Void,Void,Void> {
 
+    ProgressDialog pDialog = new ProgressDialog(getContext());
+
     @Override
     protected void onPreExecute() {
         //protected void onPreExecute() {
         super.onPreExecute();
-        ProgressDialog pDialog = new ProgressDialog(getActivity().getApplicationContext());
+        //ProgressDialog pDialog = new ProgressDialog(getActivity().getApplicationContext());
         //ProgressDialog pDialog = new ProgressDialog(getActivity(), getActivity().getTheme());
         pDialog.setMessage("Fetching User information..");
         pDialog.setCancelable(false);
@@ -98,16 +100,10 @@ public class GetUsers extends AsyncTask<Void,Void,Void> {
                         Log.d("userid: ", "> " + userid);
                         Log.d("username: ", "> " + username);
 
-
                         HashMap<String, String> valueUserTable = new HashMap<String, String>();
-
-
-
                         valueUserTable.put("userid",userid);
                         valueUserTable.put("username",username);
-
                         database.insertUser(valueUserTable);
-
                     }
                 }
                 database.close();
@@ -126,7 +122,6 @@ public class GetUsers extends AsyncTask<Void,Void,Void> {
     @Override
     protected void onPostExecute(Void result) {
         super.onPostExecute(result);
-        ProgressDialog pDialog = new ProgressDialog(getActivity().getApplicationContext());
         if (pDialog.isShowing())
             pDialog.setMessage("Fetching User information.. OK");
         pDialog.dismiss();
