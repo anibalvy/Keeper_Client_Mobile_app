@@ -1,12 +1,7 @@
 package com.kanibalv.app;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -44,13 +39,14 @@ public class navigation_view extends AppCompatActivity {
         //        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //
         //this.getActionBar().setDisplayShowHomeEnabled(false);
-        this.getActionBar().setDisplayHomeAsUpEnabled(false);
+        //this.getActionBar().setDisplayHomeAsUpEnabled(false);
         //Hide Status BAR - end
 
         setContentView(R.layout.activity_navigation_view);
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragmentNavigationView());
+            getSupportFragmentManager().beginTransaction().add(R.id.container, new PlaceholderFragmentNavigationView())
+            .commit();
             /*getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new PlaceholderFragmentNavigationView())
                     .commit();
@@ -61,19 +57,19 @@ public class navigation_view extends AppCompatActivity {
 
 
 
-        // use this to start and trigger Navigation Service
-        Intent intentNavigationService= new Intent(this, navigation_service.class);
-        //intentNavigationService.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        // potentially add data to the intent
-        //i.putExtra("KEY1", "Value to be used by the service");
-        if(startService(intentNavigationService) != null) {
-            //Service is run
-            Log.d("Ckecking Navigation Service status onCreate:", "Running");
-        }else {
-            //not running
-            startService(intentNavigationService);
-            Log.d("Ckecking Navigation Service status onCreate:", "Started");
-        }
+        //// use this to start and trigger Navigation Service
+        //Intent intentNavigationService= new Intent(this, navigation_service.class);
+        ////intentNavigationService.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        //// potentially add data to the intent
+        ////i.putExtra("KEY1", "Value to be used by the service");
+        //if(startService(intentNavigationService) != null) {
+        //    //Service is run
+        //    Log.d("Ckecking Navigation Service status onCreate:", "Running");
+        //}else {
+        //    //not running
+        //    startService(intentNavigationService);
+        //    Log.d("Ckecking Navigation Service status onCreate:", "Started");
+        //}
 
 
 
@@ -163,26 +159,28 @@ public class navigation_view extends AppCompatActivity {
         activeSession = database.checkSessionActive();
 
         TextView displaySync = (TextView)findViewById(R.id.textValueSync);
-        currentSessionStatus = (String) displaySync.getText();
+        //currentSessionStatus = (String) displaySync.getText();
 
         if(activeSession == 1 ){
 
             Toast.makeText(this, "No running Session, NOT Canceled", Toast.LENGTH_SHORT).show();
-            return;
+            //return;
+        } else {
+            Toast.makeText(this, "Navigarion_view: session running", Toast.LENGTH_LONG).show();
         }
 
-            // Update return rows affected.
-            sessionCanceled = database.updateSession(session);
-            database.close();
+        // Update return rows affected.
+        sessionCanceled = database.updateSession(session);
+        database.close();
 
 
-            if (sessionCanceled > 0){
-                Toast.makeText(this, "Session Canceled", Toast.LENGTH_SHORT).show();
-                return;
-            } else {
-                Toast.makeText(this, "Session NOT Canceled", Toast.LENGTH_SHORT).show();
-                return;
-            }
+        if (sessionCanceled > 0){
+            Toast.makeText(this, "Session Canceled", Toast.LENGTH_LONG).show();
+            return;
+        } else {
+            Toast.makeText(this, "Session NOT Canceled", Toast.LENGTH_LONG).show();
+            return;
+        }
     }
 
     @Override
@@ -193,70 +191,27 @@ public class navigation_view extends AppCompatActivity {
     }
 
 
-    //RECEIVER from Service to update data Values on the View
-    public BroadcastReceiver receiver = new BroadcastReceiver() {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Bundle bundle = intent.getExtras();
-
-            if (bundle != null) {
-                String recVelocity = intent.getStringExtra(navigation_service.SPEED);
-                String recLongitude = intent.getStringExtra(navigation_service.LONGITUDE);
-                String recLatitude = intent.getStringExtra(navigation_service.LATITUDE);
-                String recStatus = intent.getStringExtra(navigation_service.STATUS);
-                String recSync = intent.getStringExtra(navigation_service.SYNCCOUNT);
-                String recCheckPoint = intent.getStringExtra(navigation_service.CHECKPOINT);
-
-                TextView displaySpeed = (TextView)findViewById(R.id.textValueVelocity);
-                displaySpeed.setTextSize(40);
-                displaySpeed.setTextColor(Color.DKGRAY);
-                displaySpeed.setText(recVelocity);
-
-                TextView displayLongitude = (TextView)findViewById(R.id.textValueLongitude);
-                displayLongitude.setText(recLongitude);
-
-                TextView displayLatitude = (TextView)findViewById(R.id.textValueLatitude);
-                displayLatitude.setText(recLatitude);
-
-                TextView displayStatus = (TextView)findViewById(R.id.textValueStatus);
-                displayStatus.setText(recStatus);
-
-                TextView displaySync = (TextView)findViewById(R.id.textValueSync);
-                displaySync.setText(recSync);
-
-                if (recSync.equals("Synchronized")){
-                    displaySync.setBackgroundColor(getResources().getColor(R.color.green));
-                } else {
-                    displaySync.setBackgroundColor(getResources().getColor(R.color.grey_default));
-                };
-
-                TextView displayCheckPoint = (TextView)findViewById(R.id.textValueCheckPoint);
-                displayCheckPoint.setText(recCheckPoint);
-            }
-        }
-    };
 
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(receiver, new IntentFilter(navigation_service.NOTIFICATION));
+        //registerReceiver(receiver, new IntentFilter(navigation_service.NOTIFICATION));
 
-        // use this to start and trigger Navigation Service
-        Intent intentNavigationService= new Intent(this, navigation_service.class);
-        //intentNavigationService.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        // potentially add data to the intent
-        //i.putExtra("KEY1", "Value to be used by the service");
+        //// use this to start and trigger Navigation Service
+        //Intent intentNavigationService= new Intent(this, navigation_service.class);
+        ////intentNavigationService.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        //// potentially add data to the intent
+        ////i.putExtra("KEY1", "Value to be used by the service");
 
 
-        if(startService(intentNavigationService) != null) {
-            //Service is run
-            Log.d("Ckecking Navigation Service status onResume:", "Running");
-        }else {
-            //not running
-            startService(intentNavigationService);
-            Log.d("Ckecking Navigation Service status onResume:", "Started");
-        }
+        //if(startService(intentNavigationService) != null) {
+        //    //Service is run
+        //    Log.d("Ckecking Navigation Service status onResume:", "Running");
+        //}else {
+        //    //not running
+        //    startService(intentNavigationService);
+        //    Log.d("Ckecking Navigation Service status onResume:", "Started");
+        //}
     }
 
     @Override

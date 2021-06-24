@@ -21,11 +21,8 @@ import static com.kanibalv.app.ServiceHandler.URL_GET_USERS;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link refreshUsersFragment#newInstance} factory method to
+ * Use the {@link refreshUsersFragment# newInstance} factory method to
  * create an instance of this fragment.
- */
-/**
- * A placeholder fragment containing a simple view.
  */
 public class refreshUsersFragment extends Fragment {
 
@@ -68,7 +65,6 @@ public class GetUsers extends AsyncTask<Void,Void,Void> {
         pDialog.setCancelable(false);
         pDialog.setIndeterminate(true);
         pDialog.show();
-
     }
 
     @Override
